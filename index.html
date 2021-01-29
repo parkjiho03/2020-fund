@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KICK STARTER</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/app.js"></script>
+    <link rel="shortcut icon" href="images/logo3.ico">
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div class="header_con">
+            <div class="logo_con">
+                <p class="logo"><img src="images/logo.png" alt=""></p>
+            </div>
+            <div class="menu_con">
+                <ul>
+                    <li><p data-title="0" class="main active">메인페이지</p></li>
+                    <li><p data-title="1" class="addFund">펀드등록</p></li>
+                    <li><p data-title="2" class="viewFund">펀드보기</p></li>
+                    <li><p data-title="3" class="list">투자자목록</p></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <!-- 메인페이지 -->
+        <div id="main" class="page">
+            <!-- 비쥬얼 -->
+            <div class="main_visual">
+                <div class="main_wrap">
+                    <div class="main_text">
+                        <h4>Kick Starter for Startups</h4>
+                        <h1>Start with a customer support platform that can scale</h1>
+                        <p class="main_txt">Kick Starter Fund is developed to smoothly raise start-up funds between founders and investors.Kick Starter has everything you need to start talking with customers and growing your business.</p>
+                        <p class="main_button">Apply Now</p>
+                    </div>
+                    <div class="main_image">
+                        <div class="main_image_con" style="user-select:none;">
+                            <div class="main_image_back"></div>
+                            <img src="/images/collabo.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 펀드섹션 -->
+            <div style="width:100%;height:50px;user-select:none;">
+                <img style="width:100%;height:100%;" src="/images/background.png" alt="">
+            </div>
+            <div class="main_fund_cons">
+                <div class="main_fund">
+                    <div class="main_fund_title">
+                        <h2>Funds with high achievement rates</h2>
+                        <p>Shows the four Kickstarter funds with the highest achievement rates.</p>
+                    </div>
+                    <div class="main_fund_con"></div>
+                </div>
+            </div>
+            <div style="width:100%;height:50px;user-select:none;">
+                <img style="width:100%;height:100%;" src="/images/background2.png" alt="">
+            </div>
+            <div class="main_session">
+                <div class="main_session_wrap">
+                    <div class="main_image" style="width:48%;">
+                        <div class="main_image_con" style="user-select:none;">
+                            <div class="main_image_back"></div>
+                            <img src="/images/calc.jpg">
+                        </div>
+                    </div>
+                    <div class="main_session_text">
+                        <h3>Get started with Kick Starter</h3>
+                        <p class="session_text">A better experience for your customers, fewer headaches for your team. You'll be set up in minutes.</p>
+                        <p class="main_button" style="float:right;">Apply Now</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 펀드등록 -->
+        <div id="addFund" class="page">
+            <div class="add_fund_con">
+                <div class="add_fund_title">
+                    <h2>write a fund to add.</h2>
+                </div>
+                <div class="add_fund_input">
+                    <label>펀드번호</label>
+                    <input type="text" id="fund_number" readonly="readonly">
+                </div>
+                <div class="add_fund_input">
+                    <label>창업펀드명</label>
+                    <input type="text" id="fund_name" maxlength="100" placeholder="창업펀드명을 입력해주세요.">
+                </div>
+                <div class="add_fund_input">
+                    <label>모집마감일</label>
+                    <input type="datetime-local" id="fund_date" step="1">
+                </div>
+                <div class="add_fund_input">
+                    <label>모집금액</label>
+                    <input type="number" id="fund_total" placeholder="모집금액을 입력해주세요.">
+                </div>
+                <div class="add_fund_btn">
+                    <button>펀드등록</button>
+                </div>
+            </div>
+        </div>
+        <!-- 펀드보기 -->
+        <div id="viewFund" class="page">
+            <div class="view_fund_con">
+                <div class="view_fund_header">
+                    <p class="view_num">펀드번호</p>
+                    <p class="view_name">창업펀드명</p>
+                    <p class="view_date">모집마감일</p>
+                    <p class="view_total">모집금액</p>
+                    <p class="view_cur">현재금액</p>
+                    <p class="view_graph"></p>
+                    <p class="view_btns"></p>
+                </div>
+                <div class="view_fund_menu"></div>
+            </div>
+        </div>
+        <!-- 레이어 팝업 -->
+        <div id="fund_popup_bg">
+            <div id="fund_popup">
+                <p class="fund_popup_close">&times;</p>
+                <div class="fund_popup_con">
+                    <div class="fund_popup_input">
+                        <label>펀드번호</label>
+                        <input type="text" class="popup_number" readonly>
+                    </div>
+                    <div class="fund_popup_input">
+                        <label>창업펀드명</label>
+                        <input type="text" class="popup_name" readonly>
+                    </div>
+                    <div class="fund_popup_input">
+                        <label>투자자명</label>
+                        <input type="text" class="popup_user" placeholder="투자자명을 입력해주세요.">
+                    </div>
+                    <div class="fund_popup_input">
+                        <label>투자금액</label>
+                        <input type="number" class="popup_money" placeholder="투자금액을 입력해주세요.">
+                    </div>
+                    <div class="fund_popup_input">
+                        <label>서명란</label>
+                        <canvas id="popup_canvas" width="470" height="200"></canvas>
+                    </div>
+                    <div class="popup_btn">
+                        <button>제출하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 투자자목록 -->
+        <div id="listFund" class="page">
+            <div class="list_fund_con">
+                <div class="list_fund_header">
+                    <p class="list_num">펀드번호</p>
+                    <p class="list_name">창업펀드명</p>
+                    <p class="list_date">투자자명</p>
+                    <p class="list_total">투자금액</p>
+                    <p class="list_cur">펀드지분</p>
+                    <p class="list_graph"></p>
+                    <p class="list_btns"></p>
+                </div>
+                <div class="list_fund_menu"></div>
+                <div class="list_fund_btns"></div>
+            </div>
+        </div>
+    </div>
+    <!-- 푸터 -->
+    <footer>
+        <div class="footer_con">
+            <div class="footer_top">
+                <div class="footer_logo">
+                    <p><img src="/images/logo2.png" alt=""></p>
+                    <p>Kickstarter that can smoothly raise startup funds</p>
+                </div>
+                <div class="footer_menu">
+                    <div>
+                        <span>메인페이지</span>
+                    </div>
+                    <div>
+                        <span>펀드등록</span>
+                    </div>
+                    <div>
+                        <span>펀드보기</span>
+                    </div>
+                    <div>
+                        <span>투자자목록</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div>Copyright Gondr Allright reserved. Since 2017-03-01</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

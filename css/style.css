@@ -1,0 +1,705 @@
+@charset "UTF-8";
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Graphik,Helvetica,Arial,sans-serif;
+}
+
+li {
+    list-style:none;
+}
+
+a {
+    text-decoration:none;
+}
+
+#container {
+    overflow:hidden;
+    width:100%;
+    height:auto;
+    height:2019px;
+    position:relative;
+}
+
+/* 헤더 */
+header {
+    width:100%;
+    min-height:90px;
+    user-select:none;
+    box-shadow: 0 10px 30px 0 rgba(25,45,100,.08);
+}
+
+header > .header_con {
+    display:flex;
+    min-height:90px;
+    margin:0 auto;
+    max-width:1280px;
+    padding:0 15px;
+    align-items:center; 
+}
+
+.logo_con {
+    padding-top:5px;
+    padding-bottom:10px;
+}
+
+.logo_con > .logo {
+    margin-right:25px;
+    cursor:pointer;
+}
+
+.menu_con > ul {
+    display:flex;
+}
+
+.menu_con > ul > li {
+    margin:0 20px;
+    padding-bottom:10px;
+}
+
+.menu_con > ul > li > p {
+    padding-bottom:3px;
+}
+
+.menu_con > ul > li > p:not(.active) {
+    font-size:15px;
+    cursor:pointer;
+}
+
+.active {
+    border-bottom:1px solid #07C;
+    color: #07C;
+    cursor:pointer;
+}
+
+/* 메인페이지 */
+#main {
+    width:100%;
+    position:absolute;
+    left:0;
+}
+
+.main_visual {
+    margin:0 auto;
+    max-width:1280px;
+    padding-left:15px;
+    padding-right:15px;
+    height:520px;
+    margin-bottom:60px;
+}
+
+.main_wrap {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.main_text {
+    position: relative;
+    z-index: 1;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width:58.33%;
+    padding-left: 15px;
+    padding-right: 15px;
+    float:left;
+}
+
+.main_text > h4 {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 1.6;
+    letter-spacing: -.01em;
+    margin-bottom: 30px;
+    transform-origin: left center;
+    white-space: nowrap;
+    color: #1d2b36;
+}
+
+.main_text > h1 {
+    font-size:36px;
+    margin-bottom:35px;
+    max-width:600px;
+    color:#1d2b36;
+    letter-spacing:-.5px;
+    line-height:1.2;
+    margin-top:20px;
+}
+
+.main_text > .main_txt {
+    font-size: 20px;
+    width: 90%;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #556575;
+    margin-bottom: 50px;
+}
+
+.main_text > .main_button,
+.main_session_text > .main_button {
+    background:#16337F;
+    color:#fff;
+    transition:background .2s ease;
+    cursor:pointer;
+    width:160px;
+    border-radius:5px;
+    font-size:17px;
+    height:52px;
+    line-height:50px;
+    padding:0 24px;
+    font-weight:500;
+    letter-spacing:2px;
+    position:relative;
+    text-align:center;
+    user-select:none;
+}
+
+.main_text > .main_button:hover {
+    background-color: #2549a8;
+}
+
+.main_image {
+    float:right;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    width: 41.66667%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.main_image_con {
+    width:490px;
+    height:340px;
+    position:relative;
+    border-radius:5px;
+    overflow:hidden;
+}
+
+.main_image_back {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.3);
+}
+
+.main_image_con > img {
+    width:100%;
+    height:100%;
+}
+
+/* 펀드섹션 */
+.main_fund {
+    margin:0 auto;
+    padding:0 15px;
+    max-width:1280px;
+}
+
+.main_fund_cons {
+    padding-top:120px;
+    width:100%;
+    height:auto;
+    background-color:#f4f9ff;
+    padding-bottom:120px;
+}
+
+.main_fund_title {
+    margin-bottom:50px;
+}
+
+.main_fund_title > h2 {
+    font-size: 30px;
+    line-height: 1.6;
+    letter-spacing: -.35px;
+    text-align:center;
+    color: #1d2b36;
+}
+
+.main_fund_title > p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #314351;
+    text-align:center;
+}
+
+.main_fund_con {
+    float: none!important;
+    display: flex;
+    flex-wrap: wrap;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(7,30,87,.1);
+    border-radius: 6px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.fund {
+    max-width:none;
+    border-top: none;
+    /* padding:80px; */
+    height:400px;
+    flex: 0 0 25%;
+    /* border-left: 1px solid #F1F3F5; */
+    border-left:1px solid #ddd;
+    text-align:center;
+    transition:transform 0.5s ease;
+    background-color:#fff;
+    cursor:pointer;
+    user-select:none;
+}
+
+.fund:first-child {
+    border-radius:6px 0 0 6px;
+}
+
+.fund:last-child {
+    border-radius:0 6px 6px 0;
+}
+
+.fund_canvas > canvas {
+    width:200px;
+    height:200px;
+}
+
+.fund_num {
+    font-size: 25px;
+    margin: 10px 0 20px;
+    color: #1d2b36;
+}
+
+.fund_name {
+    max-width: 240px;
+    width:240px;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 1.8;
+    margin-top:20px;
+    margin-bottom:20px;
+    color: #314351;
+    overflow:hidden;
+    text-overflow:hidden;
+    white-space:nowrap;
+}
+
+.fund:hover {
+    transform:scale(1.05);
+    box-shadow: 0 5px 10px rgba(7,30,87,.1);
+    border-radius: 6px;
+    z-index:2;
+}
+
+.main_session {
+    width:100%;
+    margin:0 auto;
+    max-width:1280px;
+    padding:70px 0px;
+    padding-top:90px;
+}
+
+.main_session_wrap {
+    display: flex;
+    align-items: flex-end;
+}
+
+.main_session_text {
+    width: 42%;
+    margin-left: 8.33333%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    float:right;
+    text-align:right;
+}
+
+.main_session_text > h3 {
+    font-size:30px;
+    line-height:1.3;
+    color:#1d2b36;
+}
+
+.session_text {
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:40px;
+    margin: 0 auto 3em;
+    color:#556575;
+}
+
+/* 펀드등록 */
+#addFund {
+    width:100%;
+    min-height:70vh;
+    position:absolute;
+    left:100%;
+    top:0;
+    padding:120px 0;
+}
+
+.add_fund_con {
+    margin:0 auto;
+    max-width:800px;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+.add_fund_title {
+    text-align:center;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:100px;
+}
+
+.add_fund_title > h2 {
+    font-size: 25px;
+    text-transform:capitalize;
+}
+
+.add_fund_input {
+    width:100%;
+    margin-bottom:15px;
+}
+
+.add_fund_input > input {
+    margin-top:10px;
+    width:100%;
+    border: 1px solid #A5B2BD;
+    color: #253642;
+    border-radius:5px;
+    padding:5px 10px;
+    outline:none;
+    height:40px;
+    font-size:15px;
+}
+
+.add_fund_btn {
+    width:100%;
+    height:52px;
+}
+
+.add_fund_btn > button {
+    background: #16337F;
+    color: #fff;
+    width:100%;
+    height:100%;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    outline:none;
+    font-size:15px;
+    transition:background .2s ease;
+}
+
+.add_fund_btn > button:hover {
+    background-color:#2549a8;
+}
+
+/* 펀드보기 겸 */
+/* 펀드투자자목록 */
+#viewFund,
+#listFund {
+    width:100%;
+    min-height:100vh;
+    position:absolute;
+    padding-top:80px;
+    left:100%;
+}
+
+.view_fund_con,
+.list_fund_con {
+    margin:0 auto;
+    max-width:1280px;
+    padding:20px;
+    color:#738390;
+}
+
+.view_fund_header,
+.list_fund_header {
+    display:flex;
+}
+
+.view_fund_header > p,
+.list_fund_header > p {
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#000;
+}
+
+.view_num,
+.list_num {
+    width:10%;
+}
+
+.view_name,
+.list_name {
+    width:20%;
+}
+
+.view_date,
+.view_total,
+.view_cur,
+.list_date,
+.list_total,
+.list_cur {
+    width:15%;
+}
+
+.view_fund_menu_con,
+.list_fund_menu_con {
+    display:flex;
+    align-items:center;
+    background-color:#fff;
+    margin-top:10px;
+    height:50px;
+    box-shadow:0 5px 10px rgba(0,0,0,.1);
+    border-radius:6px;
+}
+
+.view_fund_menu_con > p,
+.view_fund_menu_con > div,
+.list_fund_menu_con > p,
+.list_fund_menu_con > div {
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.menu_num {
+    width:10%;
+    color:#000;
+    font-weight:bold;
+}
+
+.menu_name {
+    width:20%;
+    text-overflow:hidden;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.menu_date,
+.menu_total,
+.menu_cur {
+    width:15%;
+}
+
+.menu_graph {
+    width:15%;
+}
+
+.menu_graph > .menu_graph_bar_con {
+    width:80%;
+    margin-right:5px;
+    height:30px;
+    background-color:#ddd;
+    overflow:hidden;
+}
+
+.menu_graph_bar_con > .menu_graph_bar {
+    height:100%;
+    background-color:#07C; 
+}
+
+.menu_graph > .menu_graph_text {
+    color:#000;
+}
+
+.menu_btn {
+    width:10%;
+}
+
+.menu_btn > .menu_btn_yes {
+    color:#fff;
+    border:none;
+    padding:10px;
+    outline:none;
+    border-radius:6px;
+    background-color:#312788;
+    cursor:pointer;
+}
+
+.menu_btn > .menu_btn_no {
+    cursor:default;
+    outline:none;
+    border:none;
+    background-color:transparent;
+    font-size:17px;
+}
+
+
+#fund_popup_bg {
+    background:rgba(0,0,0,0.5);
+    width:100%;
+    height:100vh;
+    position:fixed;
+    left:0;
+    top:0;
+    display:none;
+    cursor:pointer;
+    z-index:3;
+}
+
+#fund_popup {
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:500px;
+    height:700px;
+    background-color:#fff;
+    cursor:default;
+    padding:15px;
+    transform:translate(-50%, -50%);
+    border-radius:6px;
+}
+
+.fund_popup_close {
+    font-size:35px;
+    font-weight:bold;
+    position:absolute;
+    top:10px;
+    right:15px;
+    cursor:pointer;
+}
+
+.fund_popup_con {
+    width:100%;
+    padding-top:50px;
+}
+
+.fund_popup_input {
+    width:100%;
+    padding:10px 0;
+}
+
+.fund_popup_input > input {
+    margin-top:7px;
+    width:100%;
+    height:30px;
+    border:1px solid #aaa;
+    border-radius:6px;
+    background-color:transparent;
+    outline:none;
+    padding:0 10px;
+}
+
+.fund_popup_input > input[readonly] {
+    background-color:#aaa;
+    color:#000;
+}
+
+.fund_popup_input > canvas {
+    width:100%;
+    border:1px solid #ddd;
+}
+
+.popup_btn {
+    width:100%;
+    height:52px;
+}
+
+.popup_btn > button {
+    width:100%;
+    outline:none;
+    cursor:pointer;
+    background-color:#16337F;
+    color:#fff;
+    height:100%;
+    border:none;
+    border-radius:5px;
+    font-size:15px;
+    transition:background .2s;
+}
+
+.popup_btn > button:hover {
+    background-color: #2549a8;
+}
+
+.list_fund_btns {
+    width:100%;
+    height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:50px;
+}
+
+.list_fund_btns > button {
+    border:none;
+    border-radius:6px;
+    width:40px;
+    height:40px;
+    cursor:pointer;
+}
+
+.pg_now {
+
+}
+
+/* 푸터 */
+footer {
+    width:100%;
+    background-color:#1d2b36;
+    padding-top:4em;
+    color:#fff;
+}
+
+.footer_con {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+    padding:24px 15px;
+}
+
+.footer_top {
+    display:flex;
+}
+
+.footer_logo {
+    width:25%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+}
+
+.footer_logo > p:first-child > img {
+    cursor:pointer;
+}
+
+.footer_menu {
+    width:75%;
+    padding-left:15px;
+    padding-right:15px;
+    position:relative;
+    display:flex;
+}
+
+.footer_menu > div {
+    width:25%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position:relative;
+    text-align:center;
+}
+
+.footer_menu > div > span {
+    cursor:pointer;
+}
+
+.footer_bottom {
+    margin-top:20px;
+    border-top:1px solid #405261;
+    padding-top:20px;
+    text-align:center;
+}

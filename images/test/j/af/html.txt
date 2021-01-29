@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="정재성 제출/fontawesome/css/all.css">
+    <link rel="stylesheet" href="정재성 제출/bootstrap-4.3.1-dist/bootstrap-4.3.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/App.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="" style="width: 100%; object-fit: cover">
+        </div>
+        <div class="nav flex flex_d flex_b m_t_40">
+            <div data-idx="0" class="font_16 fw_500 color_777 on">메인페이지</div>
+            <div data-idx="1" class="font_16 fw_500 color_777">펀드등록</div>
+            <div data-idx="2" class="font_16 fw_500 color_777">펀드보기</div>
+            <div data-idx="3" class="font_16 fw_500 color_777">투자자목록</div>
+            <div data-idx="4" class="font_16 fw_500 color_777">로그인</div>
+        </div>
+    </header>
+    <div class="main_container">
+        <div class="main section">
+            <div class="visual">
+                <img src="안진우_제출본/2.jpg" alt="" style="filter: brightness(50%)">
+                <img src="안진우_제출본/main_banner_01.jpg" alt="">
+                <div class="text">
+                    <div class="color_fff font_13 fw_500 flex flex_a_c">
+                        KICK STAETER
+                        <hr style="width: 80px; height: 1;" class="m_l_10 bg_fff">
+                    </div>
+                    <div class="color_fff fw_400 main_text m_t_30">
+                        과정이 보이고 수익이 보인다 <br>
+                        <span class="fw_600">킥스타터 펀드</span>
+                    </div>
+                </div>
+            </div>
+            <div class="main_fund_list">
+                <div class="flex">
+                    <div class="item item0" style="z-index: 25">
+                        <img src="images/handshake.jpg" alt="">
+                        <div class="item_text  p_x_30 p_y_30 flex flex_d flex_a_c">
+                            <div class="color_fff font_22 fw_500 m_t_10">진행중인 프로젝트</div>
+                            <div class="color_fffa font_16 fw_400 m_t_40">킥스타터펀드 에서</div>
+                            <div class="color_fffa font_16 fw_400">진행중인 펀드를 만나보세요</div>
+                            <div class="color_fff font_20 fw_500 m_t_50">자세히 보기</div>
+                            <hr style="width: 50%; height: 1px;" class="bg_fff">
+                        </div>
+                    </div>
+                    <div class="item item1 bg_fff" style="z-index: 24;">
+                        <div class="item_text  p_x_30 p_y_30">
+                            <div class="color_333 font_20 fw_500 m_t_10 flex flex_b flex_a_c">
+                                진행중인 프로젝트
+                                <div>+</div>
+                            </div>
+                            <div class="color_000 font_17 fw_500 m_t_40">새로운 킥스타터 펀드 홈...</div>
+                            <div class="color_777 font_14 fw_400">새로운 킥스타터 펀드 홈...</div>
+                            <hr>
+                            <div class="color_000 font_17 fw_500">킥스타터에서 새로운 가...</div>
+                            <div class="color_777 font_14 fw_400">정재성 머리 부수기...</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex main_fund_list_box">
+                    <div class="item item2 bg_blue" style="z-index: 3">
+                        <div class="item_text  p_x_30 p_y_30">
+                            <div class="color_fffa font_22 fw_500 main_percent">
+                            </div>
+                            <div class="color_fff font_17 fw_500 text_over main_name m_t_100"></div>
+                            <div class="color_fffa font_12 fw_400 m_t_20 text_over main_end"></div>
+                            <div class="color_fffa font_12 fw_400 text_over main_total"></div>
+                            <div class="bar bg_fff m_t_20"></div>
+                        </div>
+                    </div>
+                    <div class="item item3 bg_dark">
+                        <div class="item_text  p_x_30 p_y_30" style="z-index: 6">
+                            <div class="color_fffa font_22 fw_500 main_percent">
+                            </div>
+                            <div class="color_fff font_17 fw_500 text_over main_name m_t_100"></div>
+                            <div class="color_fffa font_12 fw_400 m_t_20  text_over main_end text_over"></div>
+                            <div class="color_fffa font_12 fw_400  text_over main_total text_over"></div>
+                            <div class="bar bg_fff m_t_20"></div>
+                        </div>
+                    </div>
+                    <div class="item item4 bg_yellow">
+                        <div class="item_text  p_x_30 p_y_30" style="z-index: 5;">
+                            <div class="color_fffa font_22 fw_500 main_percent">
+                            </div>
+                            <div class="color_fff font_17 fw_500 text_over main_name m_t_100"></div>
+                            <div class="color_fffa font_12 fw_400 m_t_20 text_over main_end"></div>
+                            <div class="color_fffa font_12 fw_400 text_over main_total"></div>
+                            <div class="bar bg_fff m_t_20"></div>
+                        </div>
+                    </div>
+                    <div class="item item5 bg_f7">
+                        <div class="item_text  p_x_30 p_y_30">
+                            <div class="color_777 font_22 fw_500 main_percent">
+                            </div>
+                            <div class="color_000 font_17 fw_500 text_over main_name m_t_100"></div>
+                            <div class="color_777 font_12 fw_400 m_t_20 text_over main_end"></div>
+                            <div class="color_777 font_12 fw_400 text_over main_total"></div>
+                            <div class="bar bg_000 m_t_20"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="color_000 fw_500 font_14">킥스타퍼 펀드 - 홈페이지</div>
+                <div class="color_777 font_12 fw_400 m_t_30">
+                    Tel) 031-778-2300<br> 우) 13587 경기 성남시 분당구 불정로386번길 35 양영디지털고등학교<br> Copyright Gondr Allright reserved. Since 2017-03-01<br>
+                </div>
+            </footer>
+        </div>
+        <div class="fund_register section">
+            <div class="reg_container flex flex_c">
+                <div class="reg_box flex">
+                    <div class="reg_main">
+                        <div class="color_blue font_22 fw_600 m_b_50 reg_num">A0001</div>
+                        <div class="input_group">
+                            <div class="color_blue font_20 fw_500">창업펀드명</div>
+                            <input type="text" placeholder="창업펀드명을 입력하세요" class="reg_name">
+                        </div>
+                        <div class="input_group m_t_50">
+                            <div class="color_blue font_20 fw_500">모집마감일</div>
+                            <input type="datetime-local" step="1" placeholder="모집마감일 입력하세요" class="reg_end">
+                        </div>
+                        <div class="input_group m_t_50">
+                            <div class="color_blue font_20 fw_500">모집금액</div>
+                            <input type="text" placeholder="모집금액을 입력하세요" class="reg_money">
+                        </div>
+                        <div class="reg_btn flex flex_c m_t_60">제출하기</div>
+                    </div>
+                    <div class="reg_sub "></div>
+                </div>
+            </div>
+            <footer>
+                <div class="color_000 fw_500 font_14">킥스타퍼 펀드 - 홈페이지</div>
+                <div class="color_777 font_12 fw_400 m_t_30">
+                    Tel) 031-778-2300<br> 우) 13587 경기 성남시 분당구 불정로386번길 35 양영디지털고등학교<br> Copyright Gondr Allright reserved. Since 2017-03-01<br>
+                </div>
+            </footer>
+        </div>
+        <div class="fund_view section">
+            <div class="container">
+                <div class="section_title m_t_100">
+                    <div class="color_333 font_22 fw_600">펀드 보기</div>
+                    <hr>
+                </div>
+                <div class="item_list">
+                    <!-- <div class="item">
+                        <img src="안진우_제출본/optimize.jpg" alt="">
+                        <span class="view_num">A0001</span>
+                        <div class="color_000 text_over fw_500 font_18 m_t_10">안진우안진우안진우안진우안진우안진우안진우안진우안진우안진우</div>
+                        <div class="text_over view_percent color_blue fw_600 flex flex_a_c font_22">
+                            87%
+                            <div class="text_over color_999 fw_400 m_l_10 font_13">4,500원 / 5,000원</div>
+                        </div>
+                        <div class="text_over color_999 fw_400 font_13 text_over">
+                            <span class="fw_600 color_777">마감일 - </span> 2020-10-10 10:10:10
+                        </div>
+                        <div class="flex flex_e">
+                            <div class="view_btn on">투자하기</div>
+                        </div>
+                        <div class="bar"></div>
+                    </div> -->
+                </div>
+                <div class="view_pagination_group flex flex_c">
+                    <div class="num disable">&lt;</div>
+                    <div class="num on">1</div>
+                    <div class="num">&gt;</div>
+                </div>
+            </div>
+            <footer>
+                <div class="color_000 fw_500 font_14">킥스타퍼 펀드 - 홈페이지</div>
+                <div class="color_777 font_12 fw_400 m_t_30">
+                    Tel) 031-778-2300<br> 우) 13587 경기 성남시 분당구 불정로386번길 35 양영디지털고등학교<br> Copyright Gondr Allright reserved. Since 2017-03-01<br>
+                </div>
+            </footer>
+        </div>
+        <div class="investor_list section">
+            <div class="in_container">
+                <div class="section_title m_t_100">
+                    <div class="color_333 font_22 fw_600">투자자목록</div>
+                    <hr>
+                </div>
+                <table class="table">
+                    <thead class="bg_blue">
+                        <th class="color_fff fw_500" width="10%">펀드번호</th>
+                        <th class="color_fff fw_500" width="20%">창업펀드명</th>
+                        <th class="color_fff fw_500" width="10%">투자자명</th>
+                        <th class="color_fff fw_500" width="10%">투자자 ID</th>
+                        <th class="color_fff fw_500" width="17%">투자금액</th>
+                        <th class="color_fff fw_500" width="23%">펀드지분</th>
+                        <th class="color_fff fw_500" width="12%">더보기</th>
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                            <td class="color_000 fw_500 font_16 text_over">A0001</td>
+                            <td class="color_000 fw_500 font_16 text_over">안진우안진우안진우안진우안진우안진우안진우안진우</td>
+                            <td class="color_000 fw_500 font_16 text_over">안진우안진우안진우안진우안진우</td>
+                            <td class="color_000 fw_500 font_16 text_over">jinujinujinujinu</td>
+                            <td class="color_000 fw_500 font_16 text_over">30,000원</td>
+                            <td class="color_000 fw_500 font_16 text_over">
+                                87%
+                                <div class="bar"></div>
+                            </td>
+                            <td class="color_000 fw_400 font_14 text_over">
+                                <div class="in_btn">
+                                    투자펀드계약서
+                                </div>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+                <div class="in_pagination_group flex flex_c">
+                    <div class="num disable">&lt;</div>
+                    <div class="num on">1</div>
+                    <div class="num">&gt;</div>
+                </div>
+            </div>
+
+            <footer>
+                <div class="color_000 fw_500 font_14">킥스타퍼 펀드 - 홈페이지</div>
+                <div class="color_777 font_12 fw_400 m_t_30">
+                    Tel) 031-778-2300<br> 우) 13587 경기 성남시 분당구 불정로386번길 35 양영디지털고등학교<br> Copyright Gondr Allright reserved. Since 2017-03-01<br>
+                </div>
+            </footer>
+        </div>
+        <div class="login section">
+            <div class="login_container flex flex_c">
+                <div class="login_box flex">
+                    <div class="login_main">
+                        <div class="color_blue font_22 fw_600 m_b_50 login_main_text">LOGIN</div>
+                        <div class="input_group">
+                            <div class="color_blue font_20 fw_500">아이디</div>
+                            <input type="text" placeholder="아이디를 입력하세요" class="login_id">
+                        </div>
+                        <div class="input_group m_t_50">
+                            <div class="color_blue font_20 fw_500">비밀번호</div>
+                            <input type="text" placeholder="비밀번호를 입력하세요" class="login_pass">
+                        </div>
+                        <div class="login_btn flex flex_c m_t_60">로그인</div>
+                    </div>
+                    <div class="login_sub "></div>
+                </div>
+            </div>
+            <footer>
+                <div class="color_000 fw_500 font_14">킥스타퍼 펀드 - 홈페이지</div>
+                <div class="color_777 font_12 fw_400 m_t_30">
+                    Tel) 031-778-2300<br> 우) 13587 경기 성남시 분당구 불정로386번길 35 양영디지털고등학교<br> Copyright Gondr Allright reserved. Since 2017-03-01<br>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <div class="side_bar">
+        <div class="side_main flex flex_c color_fff font_14 fw_500 ">
+            BLOG
+        </div>
+        <div class="side_sub flex flex_c color_fff font_14 fw_500">갤러리</div>
+        <div class="side_sub flex flex_c color_fff font_14 fw_500">뉴스</div>
+        <div class="side_sub flex flex_c color_fff font_14 fw_500">오시는길</div>
+    </div>
+
+    <div class="popup flex flex_c" style="display: none">
+        <div class="inner flex">
+            <div class="popup_main">
+                <div class="color_blue font_22 fw_600 m_b_50 popup_num">A0001</div>
+                <div class="input_group">
+                    <div class="color_blue font_20 fw_500">창업펀드명</div>
+                    <input type="text" placeholder="창업펀드명을 입력하세요" class="popup_name" readonly>
+                </div>
+                <input type="hidden" class="popup_user_id">
+                <div class="input_group m_t_50">
+                    <div class="color_blue font_20 fw_500">투자자명</div>
+                    <input type="text" placeholder="투자자명을 입력하세요" class="popup_user" readonly>
+                </div>
+                <div class="input_group m_t_50">
+                    <div class="color_blue font_20 fw_500">투자금액</div>
+                    <input type="text" placeholder="투자금액을 입력하세요" class="popup_money">
+                </div>
+                <div class="input_group">
+                    <div class="color_blue font_20 fw_500">서명란</div>
+                    <canvas style="width: 590px; height: 200px; border: 1px solid #1588a9" class="m_t_10"></canvas>
+                </div>
+                <div class="popup_btn flex flex_c m_t_40">제출하기</div>
+            </div>
+            <div class="popup_sub flex flex_d flex_a_c">
+                <div class="close">
+                    &times;
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html

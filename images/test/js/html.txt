@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/App.js"></script>
+    <script src="js/Swiper.js"></script>
+    <script src="js/Draw.js"></script>
+    <link rel="stylesheet" href="fa/css/all.min.css">
+    <title>^^7</title>
+</head>
+
+<body>
+
+    <div id="popup">
+        <div class="popup_container">
+            <div class="parent-cover flex-center-column popup-box">
+                <img src="images/new/logo_1.png" alt="alt" title="title">
+                <h1 class="popup_title mt-1 fowe-3 mb-2"><span class="fowe-4">킥스타터</span> 투자하기</h1>
+                <div class="pp-input-box">
+                    <label class="color-333 fowe-2 fosi-4">펀드번호</label>
+                    <input type="text" readonly id="iv_number">
+                </div>
+                <div class="pp-input-box mt-1">
+                    <label class="color-333 fowe-2 fosi-4">창업 펀드명</label>
+                    <input type="text" readonly id="iv_fund_name">
+                </div>
+                <div class="pp-double-input mt-1">
+                    <div class="pp-input-box mt-1">
+                        <label class="color-333 fowe-2 fosi-4">투자자 이름</label>
+                        <input type="text" placeholder="이름" id="iv_name">
+                    </div>
+                    <div class="pp-input-box mt-1">
+                        <label class="color-333 fowe-2 fosi-4">투자 금액</label>
+                        <input type="text" placeholder="금액" class="auto_comma" id="iv_money">
+                    </div>
+                </div>
+                <canvas id="iv_canvas" class="mt-1" width="480" height="150"></canvas>
+                <button class="iv_btn mt-2">제출하기</button>
+            </div>
+            <div class="popup-close"><i class="fa fa-times"></i></div>
+        </div>
+    </div>
+
+    <header>
+        <div id="logo" class="flex-center-row">
+            <!-- <img src="./images/new/logo_1.png" alt="logo" title="logo"> -->
+            <h1 class="logo_title">KICKSTARTER</h1>
+        </div>
+        <nav>
+            <li data-idx="0" class="nav_now">
+                <span>메인페이지</span>
+                <i class="fa fa-chevron-right"></i>
+            </li>
+            <li data-idx="1">
+                <span>펀드등록</span>
+                <i class="fa fa-chevron-right"></i>
+            </li>
+            <li data-idx="2">
+                <span>펀드보기</span>
+                <i class="fa fa-chevron-right"></i>
+            </li>
+            <li data-idx="3">
+                <span>투자자목록</span>
+                <i class="fa fa-chevron-right"></i>
+            </li>
+        </nav>
+    </header>
+
+    <section id="container">
+        <div class="page_logo">
+            <img src="./images/new/logo_2.png" alt="alt" title="title" class="mr-1">
+            <h1 class="page_title">메인페이지</h1>
+        </div>
+
+        <div id="pages">
+            <section id="main" class="page">
+                <div class="main_container page_container">
+                    <div class="main_cards">
+
+                        <div class="card card_1">
+                            <div class="card_top">
+                                <i class="fa fa-money-bill fosi-8"></i>
+                                <p class="fosi-55 fowe-5">총 모집금액</p>
+                                <p class="mt-1 fosi-7 fowe-4" id="main_fund_total">15,000,000원</p>
+                            </div>
+                            <div class="card_bottom fosi-55 fowe-3">
+                                Increased by 50%
+                            </div>
+                        </div>
+
+                        <div class="card card_2">
+                            <div class="card_top">
+                                <i class="fa fa-coins fosi-8"></i>
+                                <p class="fosi-55 fowe-5">총 투자금액</p>
+                                <p class="mt-1 fosi-7 fowe-4" id="main_invest_total">4,800,000원</p>
+                            </div>
+                            <div class="card_bottom fosi-55 fowe-3">
+                                Increased by 55%
+                            </div>
+                        </div>
+
+                        <div class="card card_3">
+                            <div class="card_top">
+                                <i class="fa fa-wallet fosi-8"></i>
+                                <p class="fosi-55 fowe-5">최근 투자</p>
+                                <p class="mt-1 fosi-7 fowe-4" id="main_invest_recent">0원</p>
+                            </div>
+                            <div class="card_bottom fosi-55 fowe-3" id="main_invest_recent_txt">
+                                Increase by 45%
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="main_table mb-5">
+                        <h1 class="color-999 fosi-6 fowe-5 mb-2" style="height: 30px;">HIGH ACHIVEMENT FUNDS</h1>
+                        <table>
+                            <thead align="center">
+                                <tr>
+                                    <th class="fowe-4" width="10%">펀드번호</th>
+                                    <th class="fowe-4" width="30%">펀드명</th>
+                                    <th class="fowe-4" width="15%">모집 금액</th>
+                                    <th class="fowe-4" width="30%">모집 날짜</th>
+                                    <th class="fowe-4" width="15%">달성률</th>
+                                </tr>
+                            </thead>
+                            <tbody align="center">
+                                <!-- <tr>
+                                    <td class="fowe-2">A0001</td>
+                                    <td class="fowe-2 ell">우리엄마펀드</td>
+                                    <td class="fowe-2">150,000,000원</td>
+                                    <td class="fowe-2">2020년 10월 25일</td>
+                                    <td class="fowe-2">
+                                        <div class="main_progress">
+                                            <div class="main_progress_inner gd-r-b">100%</div>
+                                        </div>
+                                    </td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </section>
+            <section id="form" class="page">
+
+                <h1 class="form_title fowe-5 color-999 fosi-8 mb-3">REGISTER FUND</h1>
+                <div class="fund_form">
+                    <div class="form_top form_box">
+                        <i class="fa fa-store ml-1 fosi-6"></i>
+                        <div class="form_items ml-1">
+                            <h1 class="fosi-5 fowe-4">펀드번호</h1>
+                            <p id="form_number" class="fosi-6 fowe-5">A0001</p>
+                        </div>
+                        <div class="form_top_tip fosi-4">
+                            펀드번호는 자동으로 입력됩니다. <i class="fosi-55 fas fa-info-circle"></i>
+                        </div>
+                    </div>
+                    <div class="form_box">
+                        <i class="fas fa-tag ml-1 fosi-6"></i>
+                        <div class="form_items ml-1">
+                            <h1 class="fosi-5 fowe-4">창업펀드명</h1>
+                            <input type="text" placeholder="펀드명을 입력해주세요" class="fowe-5 fosi-6" maxlength="100" id="form_name">
+                        </div>
+                        <div class="form_top_tip fosi-4">
+                            <!-- 펀드번호는 자동으로 입력됩니다s. <i class="fosi-55 fas fa-info-circle"></i> -->
+                        </div>
+                    </div>
+                    <div class="form_box">
+                        <i class="far fa-calendar ml-1 fosi-6"></i>
+                        <div class="form_items ml-1">
+                            <h1 class="fosi-5 fowe-4">모집마감일</h1>
+                            <input type="datetime-local" step="1" class="fowe-5 fosi-6" id="form_date">
+                        </div>
+                        <div class="form_top_tip fosi-4">
+                            <!-- 펀드번호는 자동으로 입력됩니다. <i class="fosi-55 fas fa-info-circle"></i> -->
+                        </div>
+                    </div>
+                    <div class="form_box">
+                        <i class="far fa-credit-card ml-1 fosi-6"></i>
+                        <div class="form_items ml-1">
+                            <h1 class="fosi-5 fowe-4">모집금액</h1>
+                            <input type="text" placeholder="모집금액을 입력해주세요" class="fowe-5 fosi-6 auto_comma" id="form_total">
+                        </div>
+                        <div class="form_top_tip fosi-4">
+                            천단위 구분기호는 자동으로 입력됩니다. <i class="fosi-55 fas fa-info-circle"></i>
+                        </div>
+                    </div>
+                    <div class="form_box form_box_end flex-center-row">
+                        <button id="form_submit_btn">펀드 등록하기</button>
+                    </div>
+                </div>
+                
+            </section>
+            <section id="fund-list" class="page flex-center-column">
+
+                <div class="fund_title fosi-10 tealc">
+                    <span class="fowe-5">킥스타터</span> 펀드 리스트
+                    <p class="fowei-4 fosi-5 color-999">관심있어 하실만한 상품들이 많아요!</p>
+                </div>
+            
+                <div class="list mt-3">
+                    <div class="list_inner">
+
+                        <!-- <div class="fund_item">
+                            <canvas class="fund_canvas" width="170" height="170"></canvas>
+                            <p class="fund_item_num fosi-6 fowe-5 color-333 mt-1">A0001</p>
+                            <p class="fund_item_name ell color-333" title="정재성인척">정재성인척하는정재성인척하는정재성인척하는정재성</p>
+                            <p class="fosi-4 fund_item_total ell color-666" title="250,000원">모집 금액 : 250,000,000,000원</p>
+                            <p class="fosi-4 fund_item_current ell color-666" title="250,000원">현재 금액 : 250,000,000원</p>
+                            <p class="fund_item_date color-999 fosi-3">2020년 10월 22일 14시 16분 25초 마감</p>
+                            <button class="btn btn-n mt-1">모집 완료</button>
+                        </div> -->
+
+                    </div>
+                </div>
+
+            </section>
+            <section id="investor_list" class="page flex-center-column">
+
+                <div class="iv_title fosi-10 tealc">
+                    <span class="fowe-5">킥스타터</span> 투자자 목록
+                    <p class="fowei-4 fosi-5 color-999">킥스타터를 이용해주시는 고마운 분들입니다.</p>
+                </div>
+
+                <div class="iv_list mt-2">
+                    <div class="iv_item">
+                        <div class="iv_item_top tealc">
+                            <h1 class="color-fff fosi-4 fowe-4 mt-1">A0001</h1>
+                            <i class="far fa-user"></i>
+                        </div>
+                        
+                        <div class="iv_item_body tealc">
+                            <p class="iv_name fosi-5 fowe-4 ell" title="정재성인척하느넞앶성">정재성인척하는정재성</p>
+                            <p class="ell color-666 iv_fund_name fosi-3 fowe-3 mt-1" title="박현진한테 칼꽂기">펀드명 : 박현진한테 칼꽂기</p>
+                            <p class="ell color-666 iv_money fosi-3 fowe-3" title="150,000원">투자금액 : 150,000,000원</p>
+                            <p class="ell color-333 iv_percent fosi-4 fowe-4">지분 : 30.00%</p>
+                            <button class="btn btn-b iv_sign_btn mt-1">투자펀드계약서</button>
+                        </div>
+
+                        <div class="iv_item_bottom">
+                            <div class="iv_item_graph"></div>
+                        </div>
+                    </div>
+                    <div class="iv_item"></div>
+                    <div class="iv_item"></div>
+                    <div class="iv_item"></div>
+                    <div class="iv_item"></div>
+                </div>
+
+                <div class="iv_paging mt-3 d-flex align-items-center">
+                    <div data-num="-1" class="pg_btn pg_controller"><i class="fa fa-chevron-left"></i></div>
+                    <div class="pg_btns d-flex align-items-center">
+                        <button class="pg_btn pg_btn_normal pg_now">1</button>
+                        <button class="pg_btn pg_btn_normal">2</button>
+                        <button class="pg_btn pg_btn_normal">3</button>
+                        <button class="pg_btn pg_btn_normal">4</button>
+                    </div>
+                    <div data-num="1" class="pg_btn pg_controller"><i class="fa fa-chevron-right"></i></div>
+                </div>
+                
+            </section>
+        </div>
+
+        <footer>
+            <div class="icons">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+            <p class="mt-1 color-aaa fowei-2">
+                <a href="#" class="ell color-aaa mr-1">회사&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소개</a>
+                <a href="#" class="color-aaa mr-1">인재채용</a>
+                <a href="#" class="color-aaa mr-1">공지사항</a>
+                <a href="#" class="color-aaa mr-1">찾아오시는길</a>
+                <a href="#" class="color-aaa mr-1">개인정보 처리방침</a>
+            </p>
+            <p class="fosi-5 fowe-2 mt-1">Copyright Gondr Allright reserved. Since 2017-03-01</p>
+        </footer>
+    </section>
+</body>
+
+</html>
+
+<!-- https://www.behance.net/gallery/106356433/Dashboard-UI?tracking_source=search_projects_recommended%7Cdashboard%20web -->
+<!-- https://www.google.com/search?q=web+form+design&rlz=1C1SQJL_koKR882KR882&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiv_dT7y9XsAhUKc3AKHU7VAJIQ_AUoAXoECAQQAw&biw=1883&bih=950#imgrc=cVwOCqBAlxpJDM -->
+<!-- https://www.kixx.co.kr/ -->
+<!-- https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F198299189826415192%2F&psig=AOvVaw2SrfPfVoKfB8hYO49EoXFr&ust=1604058390568000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMCq_6bd2ewCFQAAAAAdAAAAABAD
+ -->
+ <!-- 이거 하다가 감 -->
+<!-- #00ffc4
+#000e6e
+#5f5fff
+#cb88cb
+#af66fa
+#479ee5 -->
